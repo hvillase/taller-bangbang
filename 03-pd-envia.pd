@@ -1,0 +1,17 @@
+#N canvas 0 0 614 678 12;
+#X msg 235 158 connect localhost 57120;
+#X obj 235 214 netsend -u -b;
+#X obj 235 242 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 96 164 list trim;
+#X obj 96 129 list prepend send;
+#X msg 252 186 disconnect;
+#X floatatom 96 60 5 0 0 0 - - - 0;
+#X obj 96 94 oscformat /frec;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;

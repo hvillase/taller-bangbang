@@ -1,0 +1,105 @@
+#N canvas 0 0 500 678 12;
+#X msg 166 545 connect localhost 57120;
+#X obj 166 607 netsend -u -b;
+#X obj 166 635 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 61 474 oscformat /num;
+#X obj 61 545 list trim;
+#X obj 61 510 list prepend send;
+#X msg 187 577 disconnect;
+#X obj 190 474 oscformat /on;
+#X obj 190 438 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 402 19 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 402 84 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 59 438 300;
+#X obj 246 260 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 207 322 spigot;
+#X obj 207 360 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 402 114 float;
+#X obj 461 114 + 1;
+#X obj 402 149 mod 4;
+#X obj 207 286 sel 0;
+#X floatatom 402 184 5 0 0 0 - - - 0;
+#X obj 305 260 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 266 322 spigot;
+#X obj 266 360 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 361 260 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 322 322 spigot;
+#X obj 322 360 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 417 260 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 378 322 spigot;
+#X obj 378 360 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 266 286 sel 1;
+#X obj 322 286 sel 2;
+#X obj 378 286 sel 3;
+#X msg 224 438 1;
+#X msg 16 438 400;
+#X msg 104 438 459;
+#X obj 402 49 metro 200;
+#X obj 348 474 oscformat /rel;
+#X msg 348 438 0.2;
+#X msg 387 438 0.4;
+#X text 127 239 activa los pasos v;
+#X text 33 304 secuenciador de 4 pasos;
+#X text 128 37 Secuenciador y conexión osc;
+#X text 128 54 Para usa con Synth(perc);
+#X text 339 544 <prende conexión;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 9 0 35 0;
+#X connect 10 0 15 0;
+#X connect 11 0 3 0;
+#X connect 12 0 13 1;
+#X connect 13 0 14 0;
+#X connect 14 0 32 0;
+#X connect 14 0 33 0;
+#X connect 14 0 37 0;
+#X connect 15 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 15 1;
+#X connect 17 0 19 0;
+#X connect 18 0 13 0;
+#X connect 19 0 18 0;
+#X connect 19 0 29 0;
+#X connect 19 0 30 0;
+#X connect 19 0 31 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 32 0;
+#X connect 22 0 11 0;
+#X connect 23 0 24 1;
+#X connect 24 0 25 0;
+#X connect 25 0 32 0;
+#X connect 25 0 34 0;
+#X connect 25 0 38 0;
+#X connect 26 0 27 1;
+#X connect 27 0 28 0;
+#X connect 28 0 32 0;
+#X connect 28 0 34 0;
+#X connect 29 0 21 0;
+#X connect 30 0 24 0;
+#X connect 31 0 27 0;
+#X connect 32 0 7 0;
+#X connect 33 0 3 0;
+#X connect 34 0 3 0;
+#X connect 35 0 10 0;
+#X connect 36 0 5 0;
+#X connect 37 0 36 0;
+#X connect 38 0 36 0;
