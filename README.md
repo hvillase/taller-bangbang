@@ -42,3 +42,8 @@ UDP: User Datagram Protocol (manda mensajes datagram en pd)
 FUDI: Protocolo de red de pd, Fast Universal Digital Interface  
 localhost: huésped local  
 Port: puerto
+
+### contacto
+email: hernani.vr@gmail.com  
+twitter: @hernanivillase  
+web: www.hernanivillasenor.com  
